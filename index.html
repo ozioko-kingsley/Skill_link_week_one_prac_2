@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SkillLink - AI Career Guidance</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Career guidance, AI job recommendations, mentorship" name="keywords">
+    <meta content="SkillLink helps students and job seekers discover their ideal career paths using AI-driven insights." name="description">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/SkillLink_logo.png" width="50" height="50" alt="">
+                <a href="/index.html">SkillLink</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/assessment.html">Assessment</a></li>
+                <li><a href="/recommendations.html">Recommendations</a></li>
+                <li><a href="/mentorship.html">Mentorship</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <video src="img/hero.mp4" autoplay loop muted></video>
+        <div class="hero_content">
+            <h1>Discover Your Ideal Career Path with AI</h1>
+            <p>Take a personalized assessment, get expert recommendations, and connect with mentors.</p>
+            <a href="#assessment" class="cta-button">Start Now</a>
+        </div>
+    </section>
+
+    <section id="about" class="content-section">
+        <h2>Empowering You with AI-Driven Insights</h2>
+        <p>At SkillLink, we believe that everyone deserves a fulfilling and successful career. Our AI-powered assessment helps you discover the best career paths based on your strengths and interests.</p>
+    </section>
+
+    <section id="assessment" class="content-section">
+        <h2>Take the Career Assessment</h2>
+        <p>Our AI-driven quiz identifies your top skills and matches you with the best career options.</p>
+        <a href="/form.html" class="cta-button">Start the Quiz</a>
+    </section>
+
+    <section id="recommendations" class="content-section">
+        <h2>Personalized Career Recommendations</h2>
+        <p>Explore career paths that align with your skills and future job trends.</p>
+    </section>
+
+    <section id="mentorship" class="content-section">
+        <h2>Connect with Expert Mentors</h2>
+        <p>Schedule one-on-one mentorship sessions with industry professionals.</p>
+    </section>
+
+    <section id="contact" class="content-section">
+        <h2>Get in Touch</h2>
+        <form id="contactForm" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SkillLink. by Kingsley Ozioko All rights reserved.</p>
+    </footer>
+
+    <script defer src="script.js"></script>
+    <script defer src="/form_script.js"></script>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+    
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let subject = document.getElementById("subject").value.trim();
+            let message = document.getElementById("message").value.trim();
+    
+            // Simple validation
+            if (name === "" || email === "" || subject === "") {
+                alert("Please fill in all required fields.");
+                return;
+            }
+    
+            alert("✅ Message sent successfully! Our team will contact you soon.");
+            document.getElementById("contactForm").reset(); // Reset form fields
+        });
+    </script>
+</body>
+</html>
